@@ -47,6 +47,16 @@ body {
 .blackText{
     color: #b58863;
 }
+.piece{
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+.piece img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
 @media (min-width:600px){
     .chessboard{
         width: 600px;
@@ -57,4 +67,16 @@ body {
     .coordinate{
         font-size: 8px;
     }
+}
+.piece {
+    cursor: grab;
+    user-select: none; /* Evita selecionar texto acidentalmente */
+}
+
+.piece:active {
+    cursor: grabbing;
+}
+
+.piece img {
+    pointer-events: none; /* Permite arrastar a peça, não a imagem */
 }
